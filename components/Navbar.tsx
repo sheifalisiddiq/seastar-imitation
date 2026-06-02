@@ -41,9 +41,7 @@ export default function Navbar() {
 
         {/* Brand center */}
         <Link href="/" className="brand">
-          <span className="star" />
-          SEASTAR
-          <span className="star" />
+          <img src="/logo.jpeg" alt="Sea Star Jewels" style={{ height: 48, width: 'auto', objectFit: 'contain' }} />
         </Link>
 
         {/* Right links + actions */}

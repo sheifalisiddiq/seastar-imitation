@@ -2,40 +2,34 @@ import Link from 'next/link'
 
 const cols = [
   {
-    name: 'Gold Plated',
-    nameEm: 'Royale',
-    count: '24 Pieces',
+    name: 'Necklaces',
+    nameEm: '24K Gold Plated',
+    count: 'Shop Now',
     image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Oxidised',
-    nameEm: 'Antiqua',
-    count: '18 Pieces',
+    name: 'Bangles',
+    nameEm: 'Antique & Oxidized',
+    count: 'Shop Now',
     image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Antique',
-    nameEm: 'Heritage',
-    count: '31 Pieces',
+    name: 'Rings',
+    nameEm: 'Gold Plated',
+    count: 'Shop Now',
     image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Bridal',
-    nameEm: 'Saanjh',
-    count: '12 Pieces',
-    image: 'https://images.unsplash.com/photo-1583937443566-6fe1a1c7e2ae?auto=format&fit=crop&w=800&q=80',
+    name: 'Bracelets',
+    nameEm: 'Waterproof',
+    count: 'Shop Now',
+    image: 'https://images.unsplash.com/photo-1620656798932-902f1f1b1bdc?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Everyday',
-    nameEm: 'Mira',
-    count: '28 Pieces',
+    name: 'Anklets',
+    nameEm: 'Oxidized & Antique',
+    count: 'Shop Now',
     image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Fine',
-    nameEm: 'Velvet',
-    count: '9 Pieces',
-    image: 'https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=800&q=80',
   },
 ]
 

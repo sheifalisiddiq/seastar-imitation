@@ -1,10 +1,10 @@
 const items = [
-  { text: 'Gold Plated', em: true },
-  { text: 'Oxidised Silver', em: false },
-  { text: 'Antique Finish', em: true },
-  { text: 'Handcrafted', em: false },
-  { text: 'Saanjh Edition', em: true },
-  { text: 'Modern Heirlooms', em: false },
+  { text: '24K Gold Plated', em: true },
+  { text: 'Antique Jewellery', em: false },
+  { text: 'Oxidized Jewellery', em: true },
+  { text: 'Anti-Tarnish Waterproof', em: false },
+  { text: 'Necklaces & Bangles', em: true },
+  { text: '6-Month Guarantee', em: false },
 ]
 
 function MarqueeContent() {

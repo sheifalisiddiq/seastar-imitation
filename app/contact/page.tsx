@@ -8,7 +8,7 @@ const infoItems = [
   {
     label: 'Visit Us',
     icon: '◈',
-    lines: ['B-24, Jewellers Lane', 'Johari Bazaar, Jaipur', 'Rajasthan — 302001'],
+    lines: ['Shop No. 47, Karama Centre', 'Sea Star Textile, Near Mallu Cafe', 'Karama, Dubai'],
   },
   {
     label: 'Hours',
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   textTransform: 'uppercase',
                 }}
               >
-                Johari Bazaar · Jaipur
+                Karama Centre · Dubai
               </div>
             </div>
 

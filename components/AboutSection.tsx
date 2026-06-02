@@ -28,44 +28,44 @@ export default function AboutSection() {
               Born from <em>tradition</em>,<br />worn by the modern soul
             </h2>
             <p>
-              Seastar Imitation was founded with a single belief: that beauty should never
-              come at the cost of your values. We craft jewellery that honours India&apos;s rich
-              artisanal heritage while speaking to contemporary sensibilities.
+              Sea Star Jewels was founded with a single belief: that beauty should never come
+              at the cost of your values. We craft jewellery that celebrates South Asian heritage
+              while speaking to the modern woman&apos;s everyday life.
             </p>
             <p>
-              Every piece is conceived in our atelier in Rajasthan, where master karigars
-              breathe life into gold-plated brass, oxidised silver, and antique-finish
-              alloys — each one a quiet act of devotion.
+              Based in Karama, Dubai, our store brings you 24K gold-plated, antique, oxidized,
+              and anti-tarnish waterproof jewellery — each piece backed by a 6-month guarantee
+              and made to be worn, loved, and passed on.
             </p>
 
             <ul className="about-features">
               <li>
                 <span className="v">
                   <span className="icn">✦</span>
-                  22K Gold Plated
+                  24K Gold Plated
                 </span>
-                <span className="d">Tarnish-resistant, skin-safe alloys</span>
+                <span className="d">6-month guarantee on every piece</span>
               </li>
               <li>
                 <span className="v">
                   <span className="icn">✦</span>
-                  Handcrafted
+                  Anti-Tarnish &amp; Waterproof
                 </span>
-                <span className="d">Each piece individually finished</span>
+                <span className="d">Wear it daily, worry-free</span>
               </li>
               <li>
                 <span className="v">
                   <span className="icn">✦</span>
-                  Ethical Sourcing
+                  Antique Jewellery
                 </span>
-                <span className="d">Conflict-free materials throughout</span>
+                <span className="d">Heritage finish, timeless appeal</span>
               </li>
               <li>
                 <span className="v">
                   <span className="icn">✦</span>
-                  Free Returns
+                  Oxidized Jewellery
                 </span>
-                <span className="d">30-day hassle-free policy</span>
+                <span className="d">Bold, artistic, handcrafted pieces</span>
               </li>
             </ul>
 

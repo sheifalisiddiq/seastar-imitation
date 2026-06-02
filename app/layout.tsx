@@ -8,9 +8,9 @@ import Cursor from '@/components/Cursor'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Seastar Imitation — Adorned in Light',
+  title: 'Sea Star Jewels — Adorned in Light',
   description:
-    'Modern heirlooms in 22K-gold-plated, oxidised, antique and 10K-gold inspired jewellery.',
+    '24K gold-plated, antique, oxidized &amp; anti-tarnish waterproof jewellery. Necklaces, bangles, rings, bracelets &amp; anklets. Shop No. 47, Karama Centre, Dubai.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

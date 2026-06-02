@@ -4,11 +4,11 @@ import Footer from '@/components/Footer'
 const storyBlocks = [
   {
     num: '01',
-    title: 'Born in the Lanes of Jaipur',
-    titleEm: '',
+    title: 'Born from a Love of',
+    titleEm: 'Gold',
     body: [
-      'Seastar Imitation began in 2012 in the jeweller\'s quarter of Johari Bazaar, Jaipur — a city where gold has been worshipped for centuries. Our founder, Riya Mehta, grew up watching her grandmother layer oxidised bangles over her wrists each morning, a ritual as sacred as prayer.',
-      'She dreamed of making that beauty available to every woman — not locked behind the price of fine metals, but accessible, wearable, everyday. That dream became Seastar.',
+      'Sea Star Jewels was born from a simple belief — that every woman deserves to wear gold without compromise. Rooted in the rich tradition of South Asian craftsmanship and brought to the heart of Karama, Dubai, we set out to make jewellery that is as beautiful as it is accessible.',
+      'From necklaces to anklets, bangles to rings, every piece in our collection is crafted with care — 24K gold-plated, anti-tarnish, and built to last. Our 6-month guarantee is our promise that quality is never an afterthought.',
     ],
     image: 'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=80',
     reverse: false,
@@ -66,7 +66,7 @@ export default function AboutPage() {
       {/* Page Banner */}
       <div className="page-banner">
         <div className="container">
-          <span className="eyebrow center">Since 2012</span>
+          <span className="eyebrow center">Karama, Dubai</span>
           <h1>A quiet house <em>of craft</em></h1>
           <p>
             We make jewellery the way it has always been made — by hand, with care,

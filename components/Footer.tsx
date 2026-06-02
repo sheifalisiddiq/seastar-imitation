@@ -8,12 +8,11 @@ export default function Footer() {
           {/* Brand block */}
           <div className="brand-block">
             <div className="logo">
-              <span className="star" style={{ width: 10, height: 10, background: 'var(--gold)', transform: 'rotate(45deg)', display: 'inline-block' }} />
-              SEASTAR
+              <img src="/logo.jpeg" alt="Sea Star Jewels" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
             </div>
             <p>
-              Modern heirlooms in 22K-gold-plated, oxidised, antique and fine jewellery.
-              Crafted in Rajasthan, worn everywhere.
+              24K gold-plated, oxidised, antique &amp; anti-tarnish waterproof jewellery.
+              Based in Karama, Dubai — worn everywhere.
             </p>
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -41,10 +40,11 @@ export default function Footer() {
             <h5>Shop</h5>
             <ul>
               <li><Link href="/shop">All Jewellery</Link></li>
-              <li><Link href="/collections">Gold Plated</Link></li>
-              <li><Link href="/collections">Oxidised Silver</Link></li>
-              <li><Link href="/collections">Antique Finish</Link></li>
-              <li><Link href="/collections">Bridal Edit</Link></li>
+              <li><Link href="/collections">Necklaces</Link></li>
+              <li><Link href="/collections">Bangles</Link></li>
+              <li><Link href="/collections">Rings</Link></li>
+              <li><Link href="/collections">Bracelets</Link></li>
+              <li><Link href="/collections">Anklets</Link></li>
             </ul>
           </div>
 
@@ -65,9 +65,9 @@ export default function Footer() {
             <h5>Visit</h5>
             <div className="contact-item" style={{ marginBottom: 18 }}>
               <strong>Address</strong>
-              B-24, Jewellers Lane<br />
-              Johari Bazaar, Jaipur<br />
-              Rajasthan — 302001
+              Shop No. 47, Karama Centre<br />
+              Sea Star Textile, Near Mallu Cafe<br />
+              Karama, Dubai
             </div>
             <div className="contact-item" style={{ marginBottom: 18 }}>
               <strong>Hours</strong>
@@ -84,7 +84,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <div>© 2025 Seastar Imitation. All rights reserved.</div>
+          <div>© 2025 Sea Star Jewels. All rights reserved.</div>
           <div className="legal">
             <Link href="/contact">Privacy Policy</Link>
             <Link href="/contact">Terms of Service</Link>
