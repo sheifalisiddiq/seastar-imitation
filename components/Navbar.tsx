@@ -27,22 +27,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`nav${scrolled ? ' scrolled' : ''}`}
-        style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center' }}
-      >
-        {/* Logo — left column */}
-        <Link href="/" className="brand" style={{ justifyContent: 'flex-start' }}>
-          <img
-            src="/logo.jpeg"
-            alt="Sea Star Jewels"
-            style={{ height: 56, width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }}
-          />
-        </Link>
-
-        {/* All links — center column */}
-        <ul className="nav-links" style={{ display: 'flex' }}>
-          {links.map(l => (
+      <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
+        {/* Left links */}
+        <ul className="nav-links">
+          {links.slice(0, 2).map(l => (
             <li key={l.href}>
               <Link href={l.href} className={pathname === l.href ? 'active' : ''}>
                 {l.label}
@@ -51,38 +39,54 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Icons — right column */}
-        <div className="nav-actions" style={{ justifySelf: 'end' }}>
-          {/* Search */}
-          <button className="nav-icon" aria-label="Search">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
-          </button>
-          {/* Cart */}
-          <button className="nav-icon" onClick={openCart} aria-label="Cart" style={{ position: 'relative' }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            {cartCount > 0 && (
-              <span className="cart-badge">{cartCount}</span>
-            )}
-          </button>
-          {/* Hamburger */}
-          <button
-            className="nav-icon menu-btn"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Menu"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
+        {/* Brand center */}
+        <Link href="/" className="brand">
+          <img src="/logo.jpeg" alt="Sea Star Jewels" style={{ height: 48, width: 'auto', objectFit: 'contain' }} />
+        </Link>
+
+        {/* Right links + actions */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 36 }}>
+          <ul className="nav-links">
+            {links.slice(2).map(l => (
+              <li key={l.href}>
+                <Link href={l.href} className={pathname === l.href ? 'active' : ''}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="nav-actions">
+            {/* Search */}
+            <button className="nav-icon" aria-label="Search">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </button>
+            {/* Cart */}
+            <button className="nav-icon" onClick={openCart} aria-label="Cart" style={{ position: 'relative' }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              {cartCount > 0 && (
+                <span className="cart-badge">{cartCount}</span>
+              )}
+            </button>
+            {/* Hamburger */}
+            <button
+              className="nav-icon menu-btn"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Menu"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
 
