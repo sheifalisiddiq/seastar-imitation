@@ -1,8 +1,8 @@
 import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import Collections from '@/components/Collections'
-import AboutSection from '@/components/AboutSection'
 import Products from '@/components/Products'
+import AboutSection from '@/components/AboutSection'
 import EditorialBanner from '@/components/EditorialBanner'
 import Testimonials from '@/components/Testimonials'
 import InstagramGrid from '@/components/InstagramGrid'
@@ -15,8 +15,8 @@ export default function HomePage() {
       <Hero />
       <Marquee />
       <Collections />
-      <AboutSection />
       <Products />
+      <AboutSection />
       <EditorialBanner />
       <Testimonials />
       <InstagramGrid />

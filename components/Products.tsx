@@ -1,18 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import { products } from '@/lib/products-data'
 import { useCart } from '@/lib/cart-context'
 import type { Product } from '@/lib/types'
 
-const tabs = ['All', 'Gold Plated', 'Oxidised', 'Antique', 'Necklace', 'Bracelet']
-
-interface ProductCardProps {
-  product: Product
-}
-
-function ProductCard({ product }: ProductCardProps) {
+function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart()
 
   const handleAdd = (e: React.MouseEvent) => {
@@ -27,21 +20,15 @@ function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <div className="product">
+    <Link href={`/shop/${product.id}`} className="product">
       <div className="product-media">
         {product.badge && (
           <span className={`badge${product.badgeVariant === 'burgundy' ? ' burgundy' : ''}`}>
             {product.badge}
           </span>
         )}
-        <div
-          className="img"
-          style={{ backgroundImage: `url(${product.image})` }}
-        />
-        <div
-          className="img-hover"
-          style={{ backgroundImage: `url(${product.hoverImage})` }}
-        />
+        <div className="img" style={{ backgroundImage: `url(${product.image})` }} />
+        <div className="img-hover" style={{ backgroundImage: `url(${product.hoverImage})` }} />
         <div className="quick">
           <button className="qbtn" onClick={handleAdd}>Add to Cart</button>
           <button className="qbtn icn" aria-label="Wishlist">
@@ -59,21 +46,12 @@ function ProductCard({ product }: ProductCardProps) {
           <span className="old">₹{product.oldPrice.toLocaleString('en-IN')}</span>
         )}
       </div>
-    </div>
+    </Link>
   )
 }
 
 export default function Products() {
-  const [activeTab, setActiveTab] = useState('All')
-
-  const filtered = activeTab === 'All'
-    ? products
-    : products.filter(p =>
-        p.category.toLowerCase().includes(activeTab.toLowerCase()) ||
-        p.cat.toLowerCase().includes(activeTab.toLowerCase())
-      )
-
-  const display = filtered.slice(0, 8)
+  const display = products.slice(0, 4)
 
   return (
     <section className="section">
@@ -85,27 +63,18 @@ export default function Products() {
               The Seastar <em>Edit</em>
             </h2>
           </div>
-          <Link href="/shop" className="link-u">
-            View All <span className="arrow">→</span>
-          </Link>
-        </div>
-
-        <div className="product-tabs" data-reveal="">
-          {tabs.map(tab => (
-            <button
-              key={tab}
-              className={activeTab === tab ? 'active' : ''}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
         </div>
 
         <div className="products" data-reveal="stagger">
           {display.map(p => (
             <ProductCard key={p.id} product={p} />
           ))}
+        </div>
+
+        <div className="products-cta" data-reveal="">
+          <Link href="/shop" className="btn btn-solid">
+            Explore All Pieces <span style={{ marginLeft: 8 }}>→</span>
+          </Link>
         </div>
       </div>
     </section>

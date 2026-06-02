@@ -18,4 +18,10 @@ export interface Product {
   hoverImage: string
   badge?: string
   badgeVariant?: 'default' | 'burgundy'
+  description?: string
+  details?: { label: string; value: string }[]
+  images?: string[]
+  stock?: number
+  rating?: number
+  reviewCount?: number
 }
