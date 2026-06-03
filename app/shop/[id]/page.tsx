@@ -70,7 +70,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <main>
-      <div style={{ paddingTop: 100 }}>
+      <div className="pdp-outer" style={{ paddingTop: 100 }}>
         <div className="container">
           {/* Breadcrumb */}
           <nav className="breadcrumb" style={{ marginBottom: 48 }}>
