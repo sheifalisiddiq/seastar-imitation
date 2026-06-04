@@ -8,14 +8,17 @@ import Testimonials from '@/components/Testimonials'
 import InstagramGrid from '@/components/InstagramGrid'
 import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
+import { getFeaturedProducts } from '@/lib/sanity'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getFeaturedProducts()
+
   return (
     <main>
       <Hero />
       <Marquee />
       <Collections />
-      <Products />
+      <Products products={products} />
       <AboutSection />
       <EditorialBanner />
       <Testimonials />

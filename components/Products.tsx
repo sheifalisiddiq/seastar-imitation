@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { products } from '@/lib/products-data'
 import { useCart } from '@/lib/cart-context'
 import type { Product } from '@/lib/types'
 
@@ -50,7 +49,7 @@ function ProductCard({ product }: { product: Product }) {
   )
 }
 
-export default function Products() {
+export default function Products({ products }: { products: Product[] }) {
   const display = products.slice(0, 4)
 
   return (
