@@ -12,9 +12,6 @@ export default function Hero() {
     // Parallax on scroll
     const onScroll = () => {
       const y = window.scrollY
-      if (innerRef.current) {
-        innerRef.current.style.transform = `translateY(${y * 0.18}px)`
-      }
       if (videoRef.current) {
         videoRef.current.style.transform = `translateY(${y * 0.28}px) scale(1.1)`
       }
