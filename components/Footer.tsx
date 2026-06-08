@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand block */}
           <div className="brand-block">
             <div className="logo">
-              <img src="/7f974b6f-fe48-4d2b-a0ee-8c00561d190a.svg" alt="Sea Star Jewels" style={{ height: 52, width: 52, objectFit: 'contain', borderRadius: 8 }} />
+              <img src="/logo.jpeg" alt="Sea Star Jewels" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
             </div>
             <p>
               24K gold-plated, oxidised, antique &amp; anti-tarnish waterproof jewellery.

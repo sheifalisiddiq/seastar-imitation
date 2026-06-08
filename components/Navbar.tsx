@@ -41,7 +41,7 @@ export default function Navbar() {
 
         {/* Brand center */}
         <Link href="/" className="brand">
-          <img src="/7f974b6f-fe48-4d2b-a0ee-8c00561d190a.svg" alt="Sea Star Jewels" style={{ height: 48, width: 48, objectFit: 'contain', borderRadius: 8 }} />
+          <img src="/logo.jpeg" alt="Sea Star Jewels" style={{ height: 48, width: 'auto', objectFit: 'contain' }} />
         </Link>
 
         {/* Right links + actions */}
