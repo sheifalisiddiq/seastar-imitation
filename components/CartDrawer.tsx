@@ -61,7 +61,7 @@ export default function CartDrawer() {
                   </button>
                 </div>
                 <div className="price">
-                  ₹{(item.price * item.qty).toLocaleString('en-IN')}
+                  AED {(item.price * item.qty).toLocaleString('en-AE')}
                 </div>
               </div>
             ))
@@ -73,7 +73,7 @@ export default function CartDrawer() {
           <div className="drawer-foot">
             <div className="row">
               <span>Subtotal</span>
-              <span>₹{subtotal.toLocaleString('en-IN')}</span>
+              <span>AED {subtotal.toLocaleString('en-AE')}</span>
             </div>
             <div className="row">
               <span>Shipping</span>
@@ -81,7 +81,7 @@ export default function CartDrawer() {
             </div>
             <div className="row total">
               <span>Total</span>
-              <span>₹{subtotal.toLocaleString('en-IN')}</span>
+              <span>AED {subtotal.toLocaleString('en-AE')}</span>
             </div>
             <button className="btn btn-solid" style={{ width: '100%', justifyContent: 'center', marginTop: 18 }}>
               Checkout <span className="arrow">→</span>

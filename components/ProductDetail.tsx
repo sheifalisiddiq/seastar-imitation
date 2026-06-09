@@ -108,9 +108,9 @@ export default function ProductDetail({
               )}
 
               <div className="pdp-price-block">
-                <span className="pdp-price">₹{product.price.toLocaleString('en-IN')}</span>
+                <span className="pdp-price">AED {product.price.toLocaleString('en-AE')}</span>
                 {product.oldPrice && (
-                  <span className="pdp-old-price">₹{product.oldPrice.toLocaleString('en-IN')}</span>
+                  <span className="pdp-old-price">AED {product.oldPrice.toLocaleString('en-AE')}</span>
                 )}
                 {discount && (
                   <span className="pdp-discount-badge">{discount}% OFF</span>
@@ -184,7 +184,7 @@ export default function ProductDetail({
               <div className="pdp-trust">
                 <div className="pdp-trust-item">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 6v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                  <span>Free Shipping over ₹999</span>
+                  <span>Free Shipping over AED 100</span>
                 </div>
                 <div className="pdp-trust-item">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg>
@@ -227,8 +227,8 @@ export default function ProductDetail({
                     <div className="cat">{p.category}</div>
                     <div className="name">{p.name}</div>
                     <div className="price">
-                      ₹{p.price.toLocaleString('en-IN')}
-                      {p.oldPrice && <span className="old">₹{p.oldPrice.toLocaleString('en-IN')}</span>}
+                      AED {p.price.toLocaleString('en-AE')}
+                      {p.oldPrice && <span className="old">AED {p.oldPrice.toLocaleString('en-AE')}</span>}
                     </div>
                   </Link>
                 ))}

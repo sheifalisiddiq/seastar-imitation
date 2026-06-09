@@ -46,9 +46,9 @@ function ProductCard({ product }: { product: Product }) {
       <div className="cat">{product.category}</div>
       <div className="name">{product.name}</div>
       <div className="price">
-        ₹{product.price.toLocaleString('en-IN')}
+        AED {product.price.toLocaleString('en-AE')}
         {product.oldPrice && (
-          <span className="old">₹{product.oldPrice.toLocaleString('en-IN')}</span>
+          <span className="old">AED {product.oldPrice.toLocaleString('en-AE')}</span>
         )}
       </div>
     </Link>
@@ -122,8 +122,8 @@ export default function ShopClient({ products }: { products: Product[] }) {
                   <div className="knob r" />
                 </div>
                 <div className="price-vals">
-                  <span>₹500</span>
-                  <span>₹12,000</span>
+                  <span>AED 50</span>
+                  <span>AED 5,000</span>
                 </div>
               </div>
 

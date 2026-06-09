@@ -23,7 +23,7 @@ const infoItems = [
   {
     label: 'Wholesale',
     icon: '✦',
-    lines: ['wholesale@seastarimitation.in', 'Min. order ₹50,000', 'Trade enquiries welcome'],
+    lines: ['wholesale@seastarimitation.in', 'Min. order AED 5,000', 'Trade enquiries welcome'],
   },
 ]
 

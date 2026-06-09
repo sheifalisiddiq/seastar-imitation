@@ -142,7 +142,7 @@ export default function CollectionsPage() {
               <div className="cat">Oxidised Silver · Bestseller</div>
               <h1>Saanjh Jhumka</h1>
               <div className="pdp-price">
-                <span className="now">₹1,290</span>
+                <span className="now">AED 149</span>
                 <span className="badge">Bestseller</span>
               </div>
               <p style={{ color: 'var(--paper)', opacity: 0.82, lineHeight: 1.8, marginBottom: 28 }}>
@@ -165,7 +165,7 @@ export default function CollectionsPage() {
               </div>
               <div style={{ display: 'flex', gap: 24, paddingTop: 24, borderTop: '1px solid var(--line)' }}>
                 <span style={{ fontSize: 12, color: 'var(--muted)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-                  ✦ Free shipping above ₹999
+                  ✦ Free shipping above AED 100
                 </span>
                 <span style={{ fontSize: 12, color: 'var(--muted)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
                   ✦ 30-day returns

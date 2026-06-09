@@ -40,9 +40,9 @@ function ProductCard({ product }: { product: Product }) {
       <div className="cat">{product.category}</div>
       <div className="name">{product.name}</div>
       <div className="price">
-        ₹{product.price.toLocaleString('en-IN')}
+        AED {product.price.toLocaleString('en-AE')}
         {product.oldPrice && (
-          <span className="old">₹{product.oldPrice.toLocaleString('en-IN')}</span>
+          <span className="old">AED {product.oldPrice.toLocaleString('en-AE')}</span>
         )}
       </div>
     </Link>
