@@ -7,6 +7,7 @@ import type { Product } from '@/lib/types'
 import Footer from '@/components/Footer'
 
 const sorts = ['Featured', 'Price: Low to High', 'Price: High to Low', 'Newest']
+const JEWELLERY_TYPES = ['All', 'Necklace', 'Earrings', 'Rings', 'Bangles', 'Bracelets', 'Anklets']
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart()
@@ -64,15 +65,12 @@ export default function ShopClient({ products }: { products: Product[] }) {
     products.forEach(p => {
       counts[p.category] = (counts[p.category] ?? 0) + 1
     })
-    return Object.entries(counts).map(([label, count]) => ({ label, count }))
+    return JEWELLERY_TYPES.map(label => ({ label, count: counts[label] ?? 0 }))
   }, [products])
 
   const filtered = activeCat === 'All'
     ? products
-    : products.filter(p =>
-        p.category.toLowerCase().includes(activeCat.toLowerCase()) ||
-        p.cat.toLowerCase().includes(activeCat.toLowerCase())
-      )
+    : products.filter(p => p.category === activeCat)
 
   const sorted = [...filtered].sort((a, b) => {
     if (activeSort === 'Price: Low to High') return a.price - b.price
@@ -139,6 +137,18 @@ export default function ShopClient({ products }: { products: Product[] }) {
             </aside>
 
             <div>
+              <div className="filter-pills">
+                {categories.map(cat => (
+                  <button
+                    key={cat.label}
+                    className={`filter-pill${activeCat === cat.label ? ' active' : ''}`}
+                    onClick={() => setActiveCat(cat.label)}
+                  >
+                    {cat.label}
+                    {cat.count > 0 && <span className="pill-count">{cat.count}</span>}
+                  </button>
+                ))}
+              </div>
               <div className="shop-bar">
                 <span className="count">{sorted.length} products</span>
                 <div className="sort">

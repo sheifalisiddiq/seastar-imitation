@@ -31,6 +31,7 @@ export default defineType({
       options: {
         list: [
           { title: 'Necklace', value: 'Necklace' },
+          { title: 'Earrings', value: 'Earrings' },
           { title: 'Rings', value: 'Rings' },
           { title: 'Bangles', value: 'Bangles' },
           { title: 'Bracelets', value: 'Bracelets' },

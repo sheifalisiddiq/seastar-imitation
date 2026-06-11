@@ -4,8 +4,8 @@ export const products: Product[] = [
   {
     id: 'p1',
     name: 'Mira Polki Choker',
-    category: 'Gold Plated',
-    cat: 'gold',
+    category: 'Necklace',
+    cat: 'necklace',
     price: 3490,
     oldPrice: 5200,
     image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=70',
@@ -32,8 +32,8 @@ export const products: Product[] = [
   {
     id: 'p2',
     name: 'Saanjh Jhumka',
-    category: 'Oxidised',
-    cat: 'oxidised',
+    category: 'Earrings',
+    cat: 'earrings',
     price: 1290,
     image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=70',
     hoverImage: 'https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=600&q=70',
@@ -59,8 +59,8 @@ export const products: Product[] = [
   {
     id: 'p3',
     name: 'Noor Haar',
-    category: 'Antique',
-    cat: 'antique',
+    category: 'Necklace',
+    cat: 'necklace',
     price: 6890,
     oldPrice: 8400,
     image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=70',
@@ -87,8 +87,8 @@ export const products: Product[] = [
   {
     id: 'p4',
     name: 'Aira Tennis',
-    category: 'Bracelet',
-    cat: 'bracelet',
+    category: 'Bracelets',
+    cat: 'bracelets',
     price: 2490,
     image: 'https://images.unsplash.com/photo-1620656798932-902f1f1b1bdc?auto=format&fit=crop&w=600&q=70',
     hoverImage: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=70',
