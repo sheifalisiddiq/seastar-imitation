@@ -189,7 +189,7 @@ body.no-cursor .cursor-dot, body.no-cursor .cursor-ring { display: none; }
 /* ── Product Detail Page ── */
 .pdp { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: start; padding: 48px 0 96px; }
 .pdp-gallery { position: sticky; top: 100px; }
-.pdp-main-img { height: min(70vh, 640px); background-size: cover; background-position: center; background-color: var(--bg-3); border: 1px solid var(--line); transition: background-image 0.4s var(--ease-out); }
+.pdp-main-img { height: min(70vh, 640px); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: var(--bg-3); border: 1px solid var(--line); transition: background-image 0.4s var(--ease-out); }
 .pdp-thumb-strip { display: flex; gap: 10px; margin-top: 14px; }
 .pdp-thumb { width: 80px; height: 100px; background-size: cover; background-position: center; background-color: var(--bg-3); border: 1px solid var(--line); transition: border-color 0.3s; flex-shrink: 0; }
 .pdp-thumb.active { border-color: var(--gold); }
