@@ -8,17 +8,17 @@ import Testimonials from '@/components/Testimonials'
 import InstagramGrid from '@/components/InstagramGrid'
 import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
-import { getFeaturedProducts } from '@/lib/sanity'
+import { getFeaturedProducts, getAllProducts } from '@/lib/sanity'
 
 export default async function HomePage() {
-  const products = await getFeaturedProducts()
+  const [featured, allProducts] = await Promise.all([getFeaturedProducts(), getAllProducts()])
 
   return (
     <main>
       <Hero />
       <Marquee />
-      <Collections />
-      <Products products={products} />
+      <Collections products={allProducts} />
+      <Products products={featured} />
       <AboutSection />
       <EditorialBanner />
       <Testimonials />

@@ -114,13 +114,8 @@ body.no-cursor .cursor-dot, body.no-cursor .cursor-ring { display: none; }
 .section-head .eyebrow { margin-bottom: 20px; display: flex; }
 @media (max-width: 880px) { .section-head { grid-template-columns: 1fr; align-items: start; } }
 
-.collections { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+.collections { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .col-card { position: relative; overflow: hidden; background: var(--bg-card); border: 1px solid var(--line); aspect-ratio: 3 / 4; cursor: pointer; isolation: isolate; }
-.col-card:nth-child(1) { grid-column: span 4; }
-.col-card:nth-child(2) { grid-column: span 4; }
-.col-card:nth-child(3) { grid-column: span 4; }
-.col-card:nth-child(4) { grid-column: span 6; aspect-ratio: 4 / 3.5; }
-.col-card:nth-child(5) { grid-column: span 6; aspect-ratio: 4 / 3.5; }
 .col-card .img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 1.4s var(--ease-out), filter 0.6s; filter: brightness(0.78) saturate(0.95); }
 .col-card:hover .img { transform: scale(1.08); filter: brightness(0.92) saturate(1.05); }
 .col-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,9,8,0.92) 0%, rgba(10,9,8,0.4) 40%, transparent 80%); z-index: 1; pointer-events: none; }
@@ -136,8 +131,7 @@ body.no-cursor .cursor-dot, body.no-cursor .cursor-ring { display: none; }
 .col-card .corners::after { bottom: 16px; right: 16px; border-left: 0; border-top: 0; }
 .col-card:hover .corners::before { opacity: 0.9; top: 20px; left: 20px; }
 .col-card:hover .corners::after { opacity: 0.9; bottom: 20px; right: 20px; }
-@media (max-width: 1024px) { .col-card { grid-column: span 6 !important; aspect-ratio: 3 / 4 !important; margin-top: 0 !important; } }
-@media (max-width: 600px) { .col-card { grid-column: span 12 !important; } }
+@media (max-width: 600px) { .collections { grid-template-columns: 1fr; } }
 
 .about { display: grid; grid-template-columns: 1.05fr 1fr; gap: 96px; align-items: center; }
 .about-media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }

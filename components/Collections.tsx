@@ -1,39 +1,23 @@
 import Link from 'next/link'
+import type { Product } from '@/lib/types'
 
 const cols = [
-  {
-    name: 'Necklaces',
-    nameEm: '24K Gold Plated',
-    count: 'Shop Now',
-    image: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Bangles',
-    nameEm: 'Antique & Oxidized',
-    count: 'Shop Now',
-    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Rings',
-    nameEm: 'Gold Plated',
-    count: 'Shop Now',
-    image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Bracelets',
-    nameEm: 'Waterproof',
-    count: 'Shop Now',
-    image: 'https://images.unsplash.com/photo-1620656798932-902f1f1b1bdc?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Anklets',
-    nameEm: 'Oxidized & Antique',
-    count: 'Shop Now',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80',
-  },
+  { name: 'Necklaces', nameEm: '24K Gold Plated',    category: 'Necklace'   },
+  { name: 'Bangles',   nameEm: 'Antique & Oxidized',  category: 'Bangles'    },
+  { name: 'Rings',     nameEm: 'Gold Plated',          category: 'Rings'      },
+  { name: 'Bracelets', nameEm: 'Waterproof',           category: 'Bracelets'  },
+  { name: 'Anklets',   nameEm: 'Oxidized & Antique',   category: 'Anklets'    },
+  { name: 'Earrings',  nameEm: 'Statement Pieces',     category: 'Earrings'   },
 ]
 
-export default function Collections() {
+export default function Collections({ products }: { products: Product[] }) {
+  const cards = cols.map(col => {
+    const match = products.find(p => p.category === col.category)
+    return { ...col, image: match?.image ?? null }
+  }).filter(col => col.image !== null)
+
+  if (cards.length === 0) return null
+
   return (
     <section className="section">
       <div className="container">
@@ -50,15 +34,17 @@ export default function Collections() {
         </div>
 
         <div className="collections" data-reveal="stagger">
-          {cols.map((col, i) => (
-            <Link href="/collections" key={i} className="col-card">
-              <div
-                className="img"
-                style={{ backgroundImage: `url(${col.image})` }}
-              />
+          {cards.map((col, i) => (
+            <Link href={`/shop?cat=${col.category.toLowerCase()}`} key={i} className="col-card">
+              {col.image && (
+                <div
+                  className="img"
+                  style={{ backgroundImage: `url(${col.image})` }}
+                />
+              )}
               <div className="corners" />
               <div className="meta">
-                <span className="count">{col.count}</span>
+                <span className="count">Shop Now</span>
                 <div className="name">
                   {col.name} <em>{col.nameEm}</em>
                 </div>
